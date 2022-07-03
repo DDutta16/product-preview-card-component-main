@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    min-width: 375px;
+    max-width: 1440px;
+    --Fraunces-700: "Fraunces", serif;
+    --Montserrat-500-700: "Montserrat", sans-serif;
+    --Dark-cyan-primary: hsl(158, 36%, 37%);
+    --Cream-primary: hsl(30, 38%, 92%);
+    --Very-dark-blue-nuetral: hsl(212, 21%, 14%);
+    --Dark-grayish-blue-nuetral: hsl(228, 12%, 48%);
+    --White-nuetral: hsl(0, 0%, 100%);
+    --dark-green-active: hsl(157, 43%, 21%);
+}
+
+body {
+    background-color: var(--Cream-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 0.875rem;
+}
+
+.container {
+    max-width: 363px;
+    border-radius: 12px;
+    background-color: var(--White-nuetral);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc {
+    width: 85%;
+}
+
+.product-image {
+    content: url("images/image-product-mobile.jpg");
+    width: 100%;
+    min-height: 15rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.prod-name {
+    font-family: var(--Montserrat-500-700);
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+    color: var(--Dark-grayish-blue-nuetral);
+    margin: 1.5rem auto 1rem;
+}
+
+h1 {
+    font-family: var(--Fraunces-700);
+    color: var(--Very-dark-blue-nuetral);
+    font-size: 2rem;
+}
+
+.prod-desc {
+    font-family: var(--Montserrat-500-700);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: var(--Dark-grayish-blue-nuetral);
+    margin: 1rem auto 2.5rem;
+}
+
+.price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.offer-price {
+    font-family: var(--Fraunces-700);
+    color: var(--Dark-cyan-primary);
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.original-price {
+    font-family: var(--Montserrat-500-700);
+    font-weight: 500;
+    color: var(--Dark-grayish-blue-nuetral);
+    text-decoration-line: line-through;
+    text-decoration-thickness: 1.5px;
+    text-decoration-style: solid;
+}
+
+.add2cart {
+    background-color: var(--Dark-cyan-primary);
+    width: 100%;
+    padding: 1rem 0;
+    font-family: var(--Montserrat-500-700);
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--White-nuetral);
+    border-radius: 11px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem auto;
+}
+
+.add2cart img {
+    padding-right: 1rem;
+}
+
+.add2cart:hover {
+    cursor: pointer;
+    background-color: var(--dark-green-active);
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        min-width: 45vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 33vw;
+    }
+
+    .desc {
+        width: 50%;
+        height: 100%;
+        margin: 2vw;
+    }
+
+    .product-image {
+        content: url("images/image-product-desktop.jpg");
+        width: 50%;
+        height: 100%;
+        border-bottom-left-radius: 12px;
+        border-top-right-radius: 0;
+    }
+
+    .prod-name {
+        font-size: clamp(0.8rem, 0.3077rem + 0.7692vw, 1rem);
+        letter-spacing: 0.3em;
+        margin: 1.5em auto 1em;
+    }
+
+    h1 {
+        font-size: clamp(1.5rem, -0.2231rem + 2.6923vw, 2.2rem);
+    }
+
+    .prod-desc {
+        font-size: clamp(0.7rem, -0.0385rem + 1.1538vw, 1rem);
+        line-height: 1.5em;
+        margin: 1em auto 1.5em;
+    }
+
+    .offer-price {
+        font-size: clamp(1.5rem, 0.2692rem + 1.9231vw, 2rem);
+    }
+
+    .add2cart {
+        padding: 1em 0;
+        font-size: clamp(0.7rem, -0.0385rem + 1.1538vw, 1rem);
+        margin: 1.5vw auto;
+    }
+
+    .add2cart img {
+        padding-right: 1em;
+    }
+}
